@@ -2,21 +2,21 @@ package com.abubakir.model.shared;
 
 public abstract class Reward {
 
-    private Integer minimumCollectivity;
-    private Integer scriptsRewarded;
-    private Integer experienceRewarded;
+    private int minimumCollectivity;
+    private int scriptsRewarded;
+    private int experienceRewarded;
 
-    protected Reward(Integer minimumCollectivity, Integer scriptsRewarded, Integer experienceRewarded) {
+    protected Reward(int minimumCollectivity, int scriptsRewarded, int experienceRewarded) {
         this.minimumCollectivity = minimumCollectivity;
         this.scriptsRewarded = scriptsRewarded;
         this.experienceRewarded = experienceRewarded;
     }
 
-    public String generateRewardMessage(Integer experienceRequired) {
+    public String generateRewardMessage(int experienceRequired) {
         return buildMessage(calculateActions(experienceRequired));
     }
 
-    private String buildMessage(Integer actionsNeeded) {
+    private String buildMessage(int actionsNeeded) {
         Integer scriptsAwarded = actionsNeeded * this.scriptsRewarded;
         Integer totalExperienceAwarded = actionsNeeded * this.experienceRewarded;
         StringBuilder sb = new StringBuilder();
@@ -28,31 +28,31 @@ public abstract class Reward {
         return sb.toString();
     }
 
-    private Integer calculateActions(Integer experienceRequired) {
+    private int calculateActions(int experienceRequired) {
         return (int) Math.ceil((double) experienceRequired / this.experienceRewarded);
     }
 
-    public Integer getMinimumCollectivity() {
+    public int getMinimumCollectivity() {
         return minimumCollectivity;
     }
 
-    public void setMinimumCollectivity(Integer minimumCollectivity) {
+    public void setMinimumCollectivity(int minimumCollectivity) {
         this.minimumCollectivity = minimumCollectivity;
     }
 
-    public Integer getScriptsRewarded() {
+    public int getScriptsRewarded() {
         return scriptsRewarded;
     }
 
-    public void setScriptsRewarded(Integer scriptsRewarded) {
+    public void setScriptsRewarded(int scriptsRewarded) {
         this.scriptsRewarded = scriptsRewarded;
     }
 
-    public Integer getExperienceRewarded() {
+    public int getExperienceRewarded() {
         return experienceRewarded;
     }
 
-    public void setExperienceRewarded(Integer experienceRewarded) {
+    public void setExperienceRewarded(int experienceRewarded) {
         this.experienceRewarded = experienceRewarded;
     }
 }

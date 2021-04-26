@@ -4,7 +4,7 @@ import com.abubakir.model.shared.Reward;
 
 public class LowReward extends Reward {
 
-    public LowReward(Integer minimumCollectivity, Integer scriptsRewarded, Integer experienceRewarded) {
+    public LowReward(int minimumCollectivity, int scriptsRewarded, int experienceRewarded) {
         super(minimumCollectivity, scriptsRewarded, experienceRewarded);
     }
 }

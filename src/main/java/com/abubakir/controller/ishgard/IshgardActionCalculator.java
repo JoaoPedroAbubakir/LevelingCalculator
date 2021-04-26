@@ -6,7 +6,11 @@ import javax.swing.*;
 
 import static com.abubakir.model.ishgard.reward.TIER_REWARD.*;
 
-public class ActionCalculator {
+public class IshgardActionCalculator {
+
+    public IshgardActionCalculator() {
+
+    }
 
     public void calculateActions(Integer currentLevel, Integer experienceRequired) {
         if (currentLevel >= 20 && currentLevel < 40) {

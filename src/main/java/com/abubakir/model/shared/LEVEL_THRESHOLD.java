@@ -82,25 +82,25 @@ public enum LEVEL_THRESHOLD {
     L78(78, 32750000, 288218400),
     L79(79, 37650000, 325868400);
 
-    private final Integer level;
-    private final Integer experienceToLevelUp;
-    private final Integer totalExperienceOnStartOfNextLevel;
+    private final int level;
+    private final int experienceToLevelUp;
+    private final int totalExperienceOnStartOfNextLevel;
 
-    LEVEL_THRESHOLD(Integer level, Integer experienceToLevelUp, Integer totalExperienceOnStartOfNextLevel) {
+    LEVEL_THRESHOLD(int level, int experienceToLevelUp, int totalExperienceOnStartOfNextLevel) {
         this.level = level;
         this.experienceToLevelUp = experienceToLevelUp;
         this.totalExperienceOnStartOfNextLevel = totalExperienceOnStartOfNextLevel;
     }
 
-    public Integer getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public Integer getExperienceToLevelUp() {
+    public int getExperienceToLevelUp() {
         return experienceToLevelUp;
     }
 
-    public Integer getTotalExperienceOnStartOfNextLevel() {
+    public int getTotalExperienceOnStartOfNextLevel() {
         return totalExperienceOnStartOfNextLevel;
     }
 }

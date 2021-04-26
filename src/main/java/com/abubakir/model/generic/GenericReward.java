@@ -2,9 +2,9 @@ package com.abubakir.model.generic;
 
 public class GenericReward {
 
-    private Integer experienceRewarded;
+    private int experienceRewarded;
 
-    public GenericReward(Integer experienceRewarded) {
+    public GenericReward(int experienceRewarded) {
         this.experienceRewarded = experienceRewarded;
     }
 }
