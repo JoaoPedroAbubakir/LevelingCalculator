@@ -15,12 +15,14 @@ public class MainMenu {
 
     public MainMenu() {
         this.mainController = new MainController();
-        JFrame frame = new JFrame();
-        frame.setContentPane(mainPanel);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        createListeners();
-        frame.pack();
-        frame.setVisible(true);
+        mainController.calculateGenericActions();
+//        JFrame frame = new JFrame();
+//        frame.setContentPane(mainPanel);
+//        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+//        createListeners();
+//
+//        frame.pack();
+//        frame.setVisible(true);
     }
 
     private void createListeners() {
